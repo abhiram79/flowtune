@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowtune - Update Available</title>
+
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <style>
+        /* Material 3 Styles */
+        :root {
+            --primary: #00C853;
+            --background: #121212;
+            --surface: #1E1E1E;
+            --on-surface: #FFFFFF;
+            --outline: #5A5A5A;
+            --button-hover: #00E060;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background);
+            color: var(--on-surface);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: var(--surface);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: inline-block;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 8px 0 16px;
+            color: var(--on-surface);
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--outline);
+            margin: 16px auto;
+            width: 80%;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--on-surface);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+            animation: glow 1.5s infinite alternate ease-in-out;
+        }
+
+        .download-btn:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(0, 200, 83, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+            }
+            to {
+                box-shadow: 0 6px 14px rgba(0, 200, 83, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="material-symbols-outlined icon">system_update</span>
+        <h1>Flowtune</h1>
+        <div class="divider"></div>
+        <p>Update available!</p>
+        <p>Click below to download the latest version.</p>
+        <a href="https://your-download-link.com" class="download-btn">Download Update</a>
+    </div>
+
+</body>
+</html>
